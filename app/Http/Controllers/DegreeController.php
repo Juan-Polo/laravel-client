@@ -30,9 +30,9 @@ class DegreeController extends Controller
 
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::post($url . '/degrees', [
-            'nombre' => $request->nombre,
-            'jornada' => $request->jornada,
-            'numeroAlumnos' => $request->numeroAlumnos,
+            'name' => $request->name,
+            'school_day' => $request->school_day,
+            'students' => $request->students,
 
         ]);
 
@@ -61,9 +61,9 @@ class DegreeController extends Controller
     {
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::put($url . '/degrees/' . $request->id, [
-            'nombre' => $request->nombre,
-            'jornada' => $request->jornada,
-            'numeroAlumnos' => $request->numeroAlumnos,
+            'name' => $request->name,
+            'school_day' => $request->school_day,
+            'students' => $request->students,
 
         ]);
 

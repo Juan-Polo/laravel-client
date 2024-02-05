@@ -6,11 +6,11 @@
 
 
     @csrf
-    <label for="nombre">Nombre: <br> <input type="text" name="nombre"> </label>
+    <label for="name">Nombre: <br> <input type="text" name="name"> </label>
     <br>
-    <label for="jornada">Jornada: <br> <input type="text" name="jornada"> </label>
+    <label for="school_day">Jornada: <br> <input type="text" name="school_day"> </label>
     <br>
-    <label for="numeroAlumnos">Numero de numeroAlumnos: <br> <input type="text" name="numeroAlumnos"> </label>
+    <label for="students">Numero de numeroAlumnos: <br> <input type="text" name="students"> </label>
     <br>
     <br>
     <button type="submit"> Registrate </button>

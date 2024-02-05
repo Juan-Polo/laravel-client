@@ -1,0 +1,77 @@
+.table-users-index {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: solid 6px black;
+    width: 1500px;
+    font-size: 18px;
+}
+
+.table-users-index thead th {
+    font-size: 25px;
+    color: white;
+    background-color: #f19721;
+    height: 60px;
+}
+
+.table-users-index tbody tr td {
+    padding: 20px;
+}
+
+h1 {
+    background-color: #f19721;
+    margin: 20px;
+    width: 100%;
+
+    border-radius: 50px;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-degrees-index {
+    background-color: rgb(168, 168, 168);
+}
+
+.card {
+    background-color: aqua;
+    height: 547px;
+    width: 310px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    word-wrap: break-word;
+    border-radius: 50px;
+
+    border: solid 2px white;
+}
+
+.card section img {
+    width: 310px;
+    height: 400px;
+}
+
+.card .info section {
+    margin: 10px;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-cards {
+    background-color: #313131ad;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px 150px;
+    height: auto;
+    width: auto;
+    padding: 50px;
+}

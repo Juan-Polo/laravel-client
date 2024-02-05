@@ -8,7 +8,7 @@
     <title>@yield('title')</title>
 
 
-    @vite(['resources/css/app.css', 'esources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/table-index.css', 'esources/js/app.js'])
 
 </head>
 
@@ -46,29 +46,22 @@
             </div>
         </div>
 
-        <br><br>
-        <div class="contenedor">
-            <p>Bienvenido !!!</p>
-            <div class="atras botones"> &#60 </div>
-            <div class="adelante botones"> &#62 </div>
-            <img src="img/c1.png" alt="" id="imagen">
+
+
+
+
+
+        <div class="contenido">
+
+
+            @yield('content')
+
+
+
+
+
 
         </div>
-
-        <br><br><br>
-
-
-
-
-
-
-        @yield('content')
-
-
-
-
-
-
 
 
 

@@ -23,6 +23,17 @@ body {
     background-size: cover;
     font-family: Comic Sans MS;
 }
+
+.contenido {
+    background-color: rgba(140, 135, 135, 0);
+    height: auto;
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .container {
     width: 98%;
 
@@ -261,7 +272,7 @@ ul {
     align-items: center;
     justify-content: center;
     font-family: Comic Sans MS;
-
+    margin-top: 100px;
     gap: 10px;
     height: 340px;
 }

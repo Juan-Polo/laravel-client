@@ -1,34 +1,40 @@
-<h1> degrees </h1>
+@extends('layouts.plantilla')
+
+@section('title', 'Users')
 
 
-<table>
-    <thead>
-        <tr>
+@section('content')
 
-            <th> nombre </th>
-            <th> jornada </th>
-            <th> numero de alumnos </th>
+    <h1> Grados </h1>
 
 
-
-
-        </tr>
-
-    </thead>
-
-    <tbody>
+    <div class="contenido-cards">
         @foreach ($data as $degree)
-            <tr>
-                <td> {{ $degree['nombre'] }} </td>
-                <td>{{ $degree['jornada'] }}</td>
-                <td> {{ $degree['numeroAlumnos'] }} </td>
+            <div class="card">
 
-                <td> <a href="{{ route('degrees.show', $degree['id']) }}">Ver</a> </td>
-                <td> <a href="{{ route('degrees.destroy', $degree['id']) }}">Eliminar</a></td>
+                <section><img src="https://img.freepik.com/foto-gratis/leon-melena-arcoiris-ojos-azules_1340-39421.jpg"
+                        alt=""></section>
+                <div class="info">
 
-            </tr>
+
+
+
+                    <section>Nombre: {{ $degree['name'] }}</section>
+
+                    <section> Jornada: {{ $degree['school_day'] }}</section>
+
+                    <section> Numero de estudiantes: {{ $degree['students'] }}</section>
+
+                    <section> <a href="{{ route('degrees.show', $degree['id']) }}">Ver</a> <a
+                            href="{{ route('degrees.destroy', $degree['id']) }}">Eliminar</a></section>
+
+                </div>
+            </div>
         @endforeach
-    </tbody>
+
+    </div>
 
 
-</table>
+
+
+@endsection
