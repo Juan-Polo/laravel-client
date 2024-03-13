@@ -1,0 +1,78 @@
+.grados {
+    width: 1600px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+.grados div {
+    width: 250px;
+    height: 400px;
+    background-color: #05050588;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: solid 2px rgb(228, 225, 225);
+    border-radius: 100px 0px 50px 0px;
+    color: white;
+}
+
+.grados div:hover {
+    background-color: rgba(255, 255, 255, 0.281);
+    border: solid 2px #f19721;
+}
+
+.grados div img {
+    width: 150px;
+    height: 150px;
+}
+
+.grados div hr {
+    border: solid 2px;
+
+    width: 200px;
+}
+
+.grados div p {
+    width: 200px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding-left: 8px;
+}
+
+.añadir_grados {
+    height: 70px;
+    width: 180px;
+    background-color: #f19721;
+    color: white;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.añadir_grados:hover {
+    color: #3ba1da;
+    background-color: rgba(255, 255, 255, 0.486);
+    border: solid;
+    color: #f19721d0;
+}
+.añadir_grados img {
+    height: 98px;
+    width: 100px;
+}
+
+.content-degrees {
+    background-color: #f19721;
+}

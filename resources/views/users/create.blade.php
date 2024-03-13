@@ -11,7 +11,14 @@
     <br>
     <label for="password">Contraseña <br> <input type="password" name="password"> </label>
     <br>
-    <label for="role_id">Role <br> <input type="text" name="role_id"> </label>
+
+
+    <label>Rol:</label>
+    <select name="role_id">
+        @foreach ($roles as $role)
+            <option value="{{ $role['id'] }}">{{ $role['name'] }}</option>
+        @endforeach
+    </select>
     <br>
 
     <button type="submit"> Registrate </button>

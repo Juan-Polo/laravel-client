@@ -1,0 +1,60 @@
+.izquierda {
+    background-color: #ecebe99d;
+    border-radius: 50px;
+    height: 1450px;
+    width: 450px;
+    border: solid 1px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    color: #1b1a19;
+    font-family: Comic Sans MS;
+}
+.contenedor_pdf {
+    background-color: rgba(53, 54, 54, 0.329);
+    font-family: Comic Sans MS;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 10px;
+    border-radius: 30px;
+    height: 320px;
+    width: 400px;
+}
+
+.contenedor_pdf h3 {
+    color: #f19721;
+}
+
+.medio {
+    background-color: #ecebe99d;
+    border-radius: 50px;
+    height: 1450px;
+    width: 450px;
+    border: solid 1px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.derecha {
+    background-color: #ecebe99d;
+    border-radius: 50px;
+    height: 1450px;
+    width: 450px;
+    border: solid 1px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

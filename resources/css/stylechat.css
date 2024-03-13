@@ -1,0 +1,243 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+section {
+  display: flex;
+  overflow: hidden;
+  width: 1500px;
+  border-radius: 20px;
+  border: 10px dashed rgba(12, 12, 12, 0.616);
+}
+.divpadre1 {
+  background-color: rgba(223, 225, 226, 0.918);
+  width: 25%;
+  padding: 1.5rem;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.dmg {
+  display: flex;
+
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.vmg {
+  align-self: center;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.imgh {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+.dimg {
+  width: 48px;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.online {
+  position: absolute;
+  padding: 0.25rem;
+  background-color: green;
+  border-radius: 100%;
+  bottom: 0%;
+  right: 0%;
+  border-color: #2d3748;
+  border: 2%;
+}
+.offline {
+  position: absolute;
+  padding: 0.25rem;
+  background-color: rgba(211, 11, 11, 0);
+  border-radius: 100%;
+  bottom: 0%;
+  right: 0%;
+  border-color: #2d3748;
+  border: 2%;
+}
+.divpadre2 {
+  overflow: auto;
+  height: 78.666667%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.divc {
+  background-color: rgb(252, 252, 252);
+  border-radius: 25px;
+  padding: 1rem;
+  margin-bottom: 0rem;
+  display: flex;
+}
+.dtext {
+  width: 100%;
+  overflow: hidden;
+}
+.hora {
+  font-weight: 300;
+}
+.horaa {
+  font-weight: 300;
+  color: #696a6b;
+}
+.mgh {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.nfs {
+  display: flex;
+}
+.text1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  font-weight: 300;
+  color: #7d8288;
+}
+.p1 {
+  flex-grow: 1;
+}
+.divde {
+  background-color: #b3bac0;
+  width: 75%;
+}
+.perfil {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  border-bottom-width: 1px;
+}
+.pigm {
+  width: 48px;
+  margin-right: 10px;
+  position: relative;
+}
+.pnom {
+  display: flex;
+}
+.pp {
+  font-weight: 500;
+}
+.pp1 {
+  color: #5d5d5e;
+  font-weight: 300;
+}
+.pcenter {
+  align-self: center;
+}
+.iconsp {
+  color: #a0aec0;
+  font-weight: 500;
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+}
+.grow {
+  flex-grow: 1;
+}
+.imc {
+  border-radius: 100%;
+  width: 48px;
+  margin-right: 10px;
+  height: 48px;
+  align-self: end;
+}
+.textc {
+  background-color: white;
+  padding: 1.5rem;
+  width: 384px;
+  border-radius: 24px;
+  border-bottom-left-radius: 0.125rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  margin-bottom: 0.5rem;
+}
+.ctext {
+  font-weight: 300;
+  color: #a0aec0;
+}
+.chatp {
+  margin-bottom: 0.25rem;
+}
+.flex2 {
+  display: flex;
+  flex-direction: column;
+}
+.flexmb {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.flexm {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.textchat {
+  background-color: rgb(59 130 246);
+  padding: 1.5rem;
+  width: 384px;
+  border-radius: 24px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  margin-bottom: 0.5rem;
+  border-bottom-right-radius: 0px;
+}
+.im {
+  border-radius: 100%;
+  width: 48px;
+  margin-left: 1rem;
+  height: 48px;
+  align-self: end;
+}
+.hhoraa {
+  font-weight: 300;
+  color: #696a6b;
+  text-align: end;
+}
+.perfilc {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 10px;
+  padding-bottom: 1rem;
+  border-bottom-width: 1px;
+}
+.divpadre3 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 10px;
+  padding-bottom: 0rem;
+  display: flex;
+  border-top-width: 1px;
+}
+.inp {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-color: #f7fafc;
+  width: 100%;
+  border-radius: 5px;
+}
+.iconsin {
+  color: #a0aec0;
+  font-weight: 500;
+  margin-right: 10px;
+  height: 20px;
+  width: 1.5rem;
+}
+.bnten {
+  background-color: rgb(59 130 246);
+  color: rgb(255 255 255);
+  border-radius: 0.25rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+}

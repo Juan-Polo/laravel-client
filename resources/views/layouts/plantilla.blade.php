@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-    @vite(['resources/css/app.css', 'resources/css/table-index.css', 'esources/js/app.js'])
+    @vite(['resources/css/stylechat.css', 'resources/css/pdf.css', 'resources/css/tareas_class.css', 'resources/css/app.css', 'resources/css/table-index.css', 'resources/css/perfil.css', 'resources/css/grados.css', 'resources/css/forms.css', 'resources/css/interfaz_grado.css', 'resources/js/app.js', 'resources/js/forms.js', 'resources/js/mostrar_contenido.js'])
 
 </head>
 
@@ -51,17 +51,17 @@
 
 
 
-        <div class="contenido">
-
-
-            @yield('content')
 
 
 
+        @yield('content')
 
 
 
-        </div>
+
+
+
+
 
 
 

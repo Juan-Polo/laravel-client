@@ -13,16 +13,29 @@ class DegreeController extends Controller
     {
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url . '/degrees');
-
-
         $data = $response->json();
-        return view('degrees.index', compact('data'));
+
+
+
+        $imagesResponse  = Http::get($url . '/getImages');
+        $imagesData = $imagesResponse->json();
+
+
+
+
+        return view('degrees.index', compact('data', 'imagesData'));
     }
 
 
     public function create()
     {
-        return view('degrees.create');
+        $url = env('URL_SERVER_API', 'http://127.0.0.1');
+        $response = Http::get($url . '/getImages');
+        $data = $response->json();
+
+
+        // dd($data);
+        return view('degrees.create', compact('data'));
     }
 
     public function store(Request  $request)
@@ -33,8 +46,12 @@ class DegreeController extends Controller
             'name' => $request->name,
             'school_day' => $request->school_day,
             'students' => $request->students,
+            'image' => $request->image,
 
         ]);
+
+
+
 
         return redirect()->route('degrees.index');
     }

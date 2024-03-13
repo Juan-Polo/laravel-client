@@ -18,8 +18,8 @@
                 <th>Email</th>
 
                 <th>Rol</th>
-                <th></th>
-                <th></th>
+                <th>Imagen</th>
+                <th>Id Img</th>
             </tr>
 
 
@@ -33,9 +33,15 @@
                     <td>{{ $user['lastname'] }}</td>
                     <td>{{ $user['email'] }}</td>
                     {{-- <td>{{ $user['password'] }}</td> --}}
-                    <td>{{ $user['role_id'] }}</td>
+                    <td>{{ $user['role']['name'] }}</td>
+                    <td> <img src="{{ $user['image']['image_url'] }}" alt="{{ $user['name'] }}"
+                            style="width: 200px;height:150px">
+
+                    </td>
+                    <td>{{ $user['image']['id'] }}</td>
                     <td> <a href="{{ route('users.show', $user['id']) }}">Ver</a> </td>
                     <td> <a href="{{ route('users.destroy', $user['id']) }}">Eliminar</a></td>
+
 
                 </tr>
             @endforeach
