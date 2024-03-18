@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('content')
-    <h1>Crear un nuevo grado</h1>
+    {{-- <h1>Crear un nuevo grado</h1> --}}
 
     <div><button id="btnMostrarFormulario">agregar grado</button></div>
 

@@ -91,6 +91,12 @@
     border: solid 5px white;
 }
 
+.foto img {
+    border-radius: 100px;
+    height: 190px;
+    width: 190px;
+}
+
 .foto_perfil p {
     color: wheat;
     position: relative;

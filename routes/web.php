@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\AsignaturaController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DegreeController;
 use App\Http\Controllers\ImageController;
@@ -40,15 +41,33 @@ Route::get('/degrees/{idDegree}', [DegreeController::class, 'show'])->name('degr
 Route::post('/degrees/update', [DegreeController::class, 'update'])->name('degrees.update');
 Route::get('/degrees/delete/{id}', [DegreeController::class, 'destroy'])->name('degrees.destroy');
 
-Route::get('/activities', [ActivityController::class, 'index'])->name('activities.index');
-Route::get('/activities/create', [ActivityController::class, 'create']);
+
+
+
+Route::post('/asignaturas', [AsignaturaController::class, 'store'])->name('asignaturas.store');
+Route::get('/asignaturas/{idAsignatura}', [AsignaturaController::class, 'show'])->name('asignaturas.show');
+// Route::post('/degrees/update', [DegreeController::class, 'update'])->name('degrees.update');
+// Route::get('/degrees/delete/{id}', [DegreeController::class, 'destroy'])->name('degrees.destroy');
+
+
+
 Route::post('/activities', [ActivityController::class, 'store'])->name('activities.store');
+Route::get('/activities', [ActivityController::class, 'index'])->name('activities.index');
+
+
 Route::get('/activities/{id}', [ActivityController::class, 'show'])->name('activities.show');
 Route::post('/activities/update', [ActivityController::class, 'update'])->name('activities.update');
 Route::get('/activities/delete/{id}', [ActivityController::class, 'destroy'])->name('activities.destroy');
 
-Route::get('/images', [ImageController::class, 'index'])->name('images.index');
 
+
+
+
+
+
+
+Route::get('/images', [ImageController::class, 'index'])->name('images.index');
+Route::get('/images/create', [ImageController::class, 'create']);
 Route::post('/images', [ImageController::class, 'store'])->name('images.store');
 Route::get('/images/{idImage}', [ImageController::class, 'show'])->name('images.show');
 
@@ -56,7 +75,7 @@ Route::get('/images/{idImage}', [ImageController::class, 'show'])->name('images.
 
 
 Route::get('/images/{id}/edit', [ImageController::class, 'edit'])->name('images.edit');
-Route::get('/images/create', [ImageController::class, 'create']);
+
 
 
 

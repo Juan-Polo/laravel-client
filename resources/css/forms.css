@@ -118,3 +118,131 @@
     border: solid;
     color: #f19721d0;
 }
+
+/* ///////////////////////////////////
+
+FORMULARIO DE ASIGNATURAS
+
+////////////////////////////////// */
+
+#DivFormAsignaturas {
+    display: none; /* El formulario estará oculto inicialmente */
+    background-color: #cfdbddaf;
+    border: solid 3px white;
+    position: relative;
+    outline: 12px dashed #f19721cc;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    width: 800px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#DivFormAsignaturas form {
+    background-color: rgba(255, 12, 12, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#DivFormAsignaturas form input {
+    width: 600px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 0px;
+    border-bottom: 3px solid rgb(75, 124, 196);
+    padding: 20px;
+}
+
+#DivFormAsignaturas form label {
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(75, 124, 196);
+}
+
+#btnMostrarFormularioAsignatura {
+    height: 70px;
+    width: 265px;
+    border: 0px;
+    background-color: #f19721;
+    color: white;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 10px;
+    transition: all 600ms;
+}
+
+#btnMostrarFormularioAsignatura:hover {
+    color: #3ba1da;
+    background-color: rgba(255, 255, 255, 0.486);
+    border: solid;
+    color: #f19721d0;
+}
+
+#btnCerrarFormularioAsignaturas {
+    border: solid 2px rgba(255, 255, 255, 0);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #f1972100;
+    color: white;
+    transition: all 600ms;
+    border-radius: 10px;
+    height: 60px;
+    width: 60px;
+    bottom: 290px;
+    left: 350px;
+    position: relative;
+}
+
+.btnCrearAsignatura {
+    padding: 10px 40px;
+    border: solid 2px white;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #f19721;
+    color: white;
+    transition: all 900ms;
+    border-radius: 10px;
+    height: 50px;
+    width: 160px;
+}
+
+.btnCrearAsignatura:hover {
+    color: #3ba1da;
+    background-color: rgba(255, 255, 255, 0.486);
+    border: solid;
+    color: #f19721d0;
+}
+
+select {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 0px;
+    border-bottom: 3px solid rgb(75, 124, 196);
+    padding: 20px;
+    appearance: none;
+    background-color: #fff;
+}
+
+select option {
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(230, 223, 223);
+
+    font-family: Comic Sans MS;
+}

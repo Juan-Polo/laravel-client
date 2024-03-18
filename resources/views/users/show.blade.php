@@ -60,8 +60,27 @@
 
         <div class="portada"></div>
         <div class="foto_perfil">
-            <div class="foto"> <img src="{{ $user['image']['image_url'] }}" alt=""
-                    style="width:190px;height:190px;border-radius:100px"> </div>
+            <div class="foto">
+
+
+                @if (isset($user['image']['image_url']))
+                    <img src="{{ $urlBase . $user['image']['image_url'] }}" alt="">
+                @else
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="">
+                @endif
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
             <p>
                 <span>Nombre:</span> {{ $user['name'] }} <br /><br />
                 <span>Rol: </span>Admin

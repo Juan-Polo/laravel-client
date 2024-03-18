@@ -13,20 +13,16 @@ class UsersController extends Controller
 
     public function index()
     {
-        $urlBase = 'http://127.0.0.1:8000';
+        $urlBase = 'http://127.0.0.1:8000/';
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url . '/users');
         $data = $response->json();
 
 
-        foreach ($data as &$user) {
-            // Concatenar la URL base con la URL relativa de la imagen del usuario
-            $user['image']['image_url'] = $urlBase  . '/' . $user['image']['image_url'];
-        }
 
 
         // dd($data);
-        return view('users.index', compact('data'));
+        return view('users.index', compact('data', 'urlBase'));
     }
 
     public function create()
@@ -67,15 +63,15 @@ class UsersController extends Controller
 
     public function show($idUser)
     {
-        $urlBase = 'http://127.0.0.1:8000';
+        $urlBase = 'http://127.0.0.1:8000/';
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url . '/users/' . $idUser);
         $user = $response->json();
 
 
-        $user['image']['image_url'] = $urlBase . '/' . $user['image']['image_url'];
 
-        return view('users.show', compact('user'));
+
+        return view('users.show', compact('user', 'urlBase'));
     }
 
 

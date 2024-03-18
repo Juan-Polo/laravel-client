@@ -70,8 +70,8 @@ class DegreeController extends Controller
     {
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url . '/degrees/' . $idDegree);
-        $degree = $response->json();
-        return view('degrees.show', compact('degree'));
+        $data = $response->json();
+        return view('degrees.show', compact('data'));
     }
 
     public function update(Request $request)

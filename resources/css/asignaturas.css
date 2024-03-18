@@ -1,0 +1,35 @@
+.contenedorActividades {
+    background-color: rgba(168, 14, 14, 0.015);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.actividad {
+    background-color: rgb(196, 212, 212);
+    width: 1200px;
+
+    border: solid 2px;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+
+    gap: 60px;
+    height: auto;
+}
+
+.actividad div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

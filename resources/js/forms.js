@@ -14,3 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 "none";
         });
 });
+
+/////////////////////////
+
+// FORMULARIO ASIGNATURAS
+
+////////////////////////
+
+document.addEventListener("DOMContentLoaded", function () {
+    document
+        .getElementById("btnMostrarFormularioAsignatura")
+        .addEventListener("click", function () {
+            document.getElementById("DivFormAsignaturas").style.display =
+                "block";
+        });
+
+    document
+        .getElementById("btnCerrarFormularioAsignaturas")
+        .addEventListener("click", function () {
+            document.getElementById("DivFormAsignaturas").style.display =
+                "none";
+        });
+});

@@ -34,11 +34,22 @@
                     <td>{{ $user['email'] }}</td>
                     {{-- <td>{{ $user['password'] }}</td> --}}
                     <td>{{ $user['role']['name'] }}</td>
-                    <td> <img src="{{ $user['image']['image_url'] }}" alt="{{ $user['name'] }}"
-                            style="width: 200px;height:150px">
+                    <td>
+                        @if (isset($user['image']['image_url']))
+                            <img src="{{ $urlBase . $user['image']['image_url'] }}" alt=""
+                                style="width: 150px;height:150px">
+                        @else
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt=""
+                                style="width: 150px;height:150px">
+                        @endif
+                    </td>
+
+                    <td>
+                        {{-- <img src="{{ $user['image']['portada_url'] }}" alt="" style="width: 200px;height:150px"> --}}
 
                     </td>
-                    <td>{{ $user['image']['id'] }}</td>
+                    {{-- <td>{{ $user['image']['id'] ?? '' }}</td> --}}
+
                     <td> <a href="{{ route('users.show', $user['id']) }}">Ver</a> </td>
                     <td> <a href="{{ route('users.destroy', $user['id']) }}">Eliminar</a></td>
 

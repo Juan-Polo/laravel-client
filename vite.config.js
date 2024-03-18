@@ -14,6 +14,7 @@ export default defineConfig({
                 "resources/css/tareas_class.css",
                 "resources/css/pdf.css",
                 "resources/css/stylechat.css",
+                "resources/css/asignaturas.css",
                 //////////////////////////////////////////////////////
                 "resources/js/app.js",
                 "resources/js/forms.js",

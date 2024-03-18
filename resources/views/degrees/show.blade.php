@@ -409,22 +409,63 @@
 
         <div id="div_asignaturas">
             <h1>Asignaturas</h1>
+
             <div id="contenedor_asignaturas">
 
+                @foreach ($data['degree']['asignaturas'] as $asignaturas)
+                    <a href="{{ route('asignaturas.show', $asignaturas['id']) }}">
 
-                @foreach ($degree['asignaturas'] as $asignaturas)
-                    <div class="asignaturas">
-                        <h2> {{ $asignaturas['name'] }} </h2>
-                        <div>
-                            <p> Maestro:
-                                {{ $asignaturas['maestro']['user']['name'] . ' ' . $asignaturas['maestro']['user']['name'] }}
-                            </p>
-                            <p>Email: {{ $asignaturas['maestro']['user']['email'] }} </p>
+                        <div class="asignaturas">
+                            <h2> {{ $asignaturas['name'] }} </h2>
+                            <div>
+                                <p> Maestro:
+                                    {{ $asignaturas['maestro']['user']['name'] . ' ' . $asignaturas['maestro']['user']['lastname'] }}
+                                </p>
+                                <p>Email: {{ $asignaturas['maestro']['user']['email'] }} </p>
 
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
+
+
             </div>
+
+
+            <div><button id="btnMostrarFormularioAsignatura">agregar Asignatura</button></div>
+            <div id="DivFormAsignaturas">
+                <form action="{{ route('asignaturas.store') }}" method="POST" enctype="multipart/form-data"
+                    id="formularioDegrees">
+
+                    @csrf
+                    <input type="text" name="name" placeholder="Asignatura ">
+                    <br>
+
+                    <select name="maestro_id">
+                        @foreach ($data['maestros'] as $maestro)
+                            <option value="{{ $maestro['id'] }}">
+                                {{ $maestro['user']['name'] . ' ' . $maestro['user']['lastname'] }}</option>
+                        @endforeach
+                    </select>
+                    {{-- <input type="text" name="maestro_id" placeholder="Escoge el maestro "> --}}
+
+                    <br><br>
+                    <label>Grado: {{ $data['degree']['name'] }}</label>
+                    <input type="hidden" name="degree_id" value="{{ $data['degree']['id'] }}">
+
+
+                    <br><br>
+
+                    <button type="submit" class="btnCrearAsignatura"> Crear </button>
+
+                    <!-- Botón de cerrar -->
+
+                    <button type="button" id="btnCerrarFormularioAsignaturas"><i class="fa-solid fa-circle-xmark"
+                            style="color: red; font-size:50px"></i></button>
+
+                </form>
+            </div>
+
         </div>
 
         {{-- <div id="div_pdf">
