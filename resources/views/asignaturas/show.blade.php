@@ -1,6 +1,19 @@
 @extends('layouts.plantilla')
 @section('content')
+    <a href="{{ route('asignaturas.guias', $data['id']) }}">
+        <div class="guias">
+            <p>Quias de refuerzo del </p>
+            <p> grado {{ $data['name'] }} </p>
+        </div>
+    </a>
+
+
+
+
     <div class="contenedorActividades">
+
+
+
 
 
 

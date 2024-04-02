@@ -47,4 +47,23 @@ class AsignaturaController extends Controller
 
         return view('asignaturas.show', compact('data', 'urlBase'));
     }
+
+
+
+
+
+
+
+
+    public function guias($idAsignatura)
+    {
+
+        $url = env('URL_SERVER_API', 'http://127.0.0.1');
+        $response = Http::get($url . '/asignaturas/' . $idAsignatura);
+        $data = $response->json();
+
+        // dd($data);
+
+        return view('guias.show', compact('data'));
+    }
 }

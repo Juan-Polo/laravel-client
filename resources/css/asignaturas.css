@@ -33,3 +33,34 @@ form {
     justify-content: center;
     gap: 20px;
 }
+
+.evidencia {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.guias {
+    background-color: aliceblue;
+    position: fixed;
+    right: 90px;
+    top: 400px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.contenedor_guias {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 30px;
+}
+
+.contenedor_guias div {
+    border: solid 2px;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

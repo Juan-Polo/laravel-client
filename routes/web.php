@@ -46,6 +46,14 @@ Route::get('/degrees/delete/{id}', [DegreeController::class, 'destroy'])->name('
 
 Route::post('/asignaturas', [AsignaturaController::class, 'store'])->name('asignaturas.store');
 Route::get('/asignaturas/{idAsignatura}', [AsignaturaController::class, 'show'])->name('asignaturas.show');
+
+Route::get('/asignaturas/{idAsignatura}/guias', [AsignaturaController::class, 'guias'])->name('asignaturas.guias');
+
+
+
+
+
+
 // Route::post('/degrees/update', [DegreeController::class, 'update'])->name('degrees.update');
 // Route::get('/degrees/delete/{id}', [DegreeController::class, 'destroy'])->name('degrees.destroy');
 
@@ -58,6 +66,10 @@ Route::get('/activities', [ActivityController::class, 'index'])->name('activitie
 Route::get('/activities/{id}', [ActivityController::class, 'show'])->name('activities.show');
 Route::post('/activities/update', [ActivityController::class, 'update'])->name('activities.update');
 Route::get('/activities/delete/{id}', [ActivityController::class, 'destroy'])->name('activities.destroy');
+
+
+
+
 
 
 

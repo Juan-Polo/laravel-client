@@ -32,11 +32,21 @@
 
 
         @foreach ($data['evidencias'] as $evidencia)
-            <div>
+            <div class="evidencia">
                 <p> {{ $evidencia['id'] }} </p>
-                <p>{{ $evidencia['evidencia_url'] }} </p>
+
 
                 <p>{{ $evidencia['fechaSubida'] }} </p>
+
+
+
+
+                <a href=" {{ $urlBase . $evidencia['evidencia_url'] }} " download=""><i style="font-size: 50px"
+                        class="fa-solid fa-file-pdf"></i> </a>
+
+
+
+
                 <p>{{ $evidencia['activity_id'] }} </p>
 
 
@@ -47,14 +57,11 @@
 
 
 
-        <form action="http://127.0.0.1:8000/v1/activities" method="POST" enctype="multipart/form-data">
+        <form action="http://127.0.0.1:8000/v1/evidencias" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="file" name="actividad_url" placeholder="actividad_url">
-            <input type="text" name="titulo" placeholder="titulo">
-            <input type="text" name="descripcion" placeholder="descripcion">
-            <input type="datetime-local" name="fechaInicio" placeholder="Fecha y hora de inicio">
-            <input type="datetime-local" name="fechaFin" placeholder="Fecha y hora de fin">
-            <input type="hidden" name="asignatura_id" value="{{ $data['id'] }}">
+            <input type="file" name="evidencia_url" placeholder="evidencia_url">
+            <input type="datetime-local" name="fechaSubida" placeholder="fechaSubida">
+            <input type="text" name="activity_id" value="{{ $data['id'] }}">
 
 
             <button type="submit">Guardar</button>
