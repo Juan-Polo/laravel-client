@@ -15,9 +15,12 @@ export default defineConfig({
                 "resources/css/pdf.css",
                 "resources/css/stylechat.css",
                 "resources/css/asignaturas.css",
+                "resources/css/login.css",
                 //////////////////////////////////////////////////////
                 "resources/js/app.js",
                 "resources/js/forms.js",
+                "resources/js/login.js",
+
                 "resources/js/mostrar_contenido.js",
             ],
             refresh: true,
