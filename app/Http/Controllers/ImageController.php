@@ -23,12 +23,6 @@ class ImageController extends Controller
     }
 
 
-    public function create()
-    {
-        return view('profile-image.create');
-    }
-
-
 
     public function destroy($idImage)
     {

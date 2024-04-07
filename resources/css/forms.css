@@ -318,6 +318,9 @@ select option {
     margin-bottom: 50px;
 }
 
+.FormAsignaturas button {
+}
+
 .FormAsignaturas input {
     width: 600px;
     height: 40px;

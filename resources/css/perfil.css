@@ -28,7 +28,9 @@
     height: 100px;
 }
 
-.subir div form button {
+.subir div form button,
+.FormAsignaturas button,
+.actividad button {
     padding: 10px 0px;
     border: solid 2px white;
     font-size: 15px;
@@ -42,7 +44,9 @@
     width: 150px;
 }
 
-.subir div form button:hover {
+.subir div form button:hover,
+.FormAsignaturas button:hover,
+.actividad button:hover {
     color: #3ba1da;
     background-color: rgba(255, 255, 255, 0.486);
     border: solid;

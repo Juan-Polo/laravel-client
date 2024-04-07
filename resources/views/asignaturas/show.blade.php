@@ -52,18 +52,19 @@
                 </div>
 
                 <div>
-                    <p> <strong>Titulo :</strong> {{ $actividad['titulo'] }}</p>
-                    <p><strong>descripcion :</strong>{{ $actividad['descripcion'] }}</p>
-                    <p><strong>Fecha de inicio :</strong>{{ $actividad['fechaInicio'] }}</p>
+                    <p> <strong style="color: blue">Titulo :</strong> {{ $actividad['titulo'] }}</p>
+                    <p><strong style="color: blue">Descripcion :</strong>{{ $actividad['descripcion'] }}</p>
+                    <p><strong style="color: blue">Fecha de inicio :</strong>{{ $actividad['fechaInicio'] }}</p>
 
-                    <p><strong>Fecha de fin :</strong> {{ $actividad['fechaFin'] }}</p>
+                    <p><strong style="color: blue">Fecha de fin :</strong> {{ $actividad['fechaFin'] }}</p>
                 </div>
                 <div>
 
 
 
                     <a href=" {{ $urlBase . $actividad['actividad_url'] }} " download="{{ $actividad['titulo'] }}"><i
-                            style="font-size: 50px" class="fa-solid fa-file-pdf"></i> </a>
+                            style="font-size: 50px;color:#f19721d0;" class="fa-solid fa-file-pdf"></i>
+                    </a>
 
                 </div>
 
