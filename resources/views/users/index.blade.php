@@ -51,7 +51,9 @@
                     {{-- <td>{{ $user['image']['id'] ?? '' }}</td> --}}
 
                     <td> <a href="{{ route('users.show', $user['id']) }}">Ver</a> </td>
-                    <td> <a href="{{ route('users.destroy', $user['id']) }}">Eliminar</a></td>
+                    <td> <a href="{{ route('users.destroy', $user['id']) }}"><i class="fa-solid fa-trash"
+                                style="color: #ff0000; font-size:40px"></i></a>
+                    </td>
 
 
                 </tr>

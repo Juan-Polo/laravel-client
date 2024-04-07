@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .getElementById("btnMostrarFormulario")
         .addEventListener("click", function () {
             document.getElementById("DivformularioDegrees").style.display =
-                "block";
+                "flex";
         });
 
     document

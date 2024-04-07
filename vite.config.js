@@ -16,10 +16,17 @@ export default defineConfig({
                 "resources/css/stylechat.css",
                 "resources/css/asignaturas.css",
                 "resources/css/login.css",
+                "resources/css/carrousel.css",
+                "resources/css/pre-fre.css",
+                "resources/css/mision_vision.css",
+                "resources/css/contactenos.css",
+
                 //////////////////////////////////////////////////////
                 "resources/js/app.js",
                 "resources/js/forms.js",
                 "resources/js/login.js",
+                "resources/js/carrousel.js",
+                "resources/js/pre-fre.js",
 
                 "resources/js/mostrar_contenido.js",
             ],

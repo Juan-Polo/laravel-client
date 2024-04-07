@@ -60,7 +60,7 @@ class ActivityController extends Controller
 
         $data = $response->json();
 
-        // dd($data);
+
 
         return view('activities.show', compact('data', 'urlBase'));
     }

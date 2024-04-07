@@ -5,33 +5,7 @@
 
 @section('content')
 
-    {{-- <h1> Grados </h1>
 
-
-    <div class="contenido-cards">
-        @foreach ($data as $degree)
-            <div class="card">
-
-                <section> <img src="{{ asset($degree['image']) }}" alt=""> </section>
-                <div class="info">
-
-
-
-
-                    <section>Nombre: {{ $degree['name'] }}</section>
-
-                    <section> Jornada: {{ $degree['school_day'] }}</section>
-
-                    <section> Numero de estudiantes: {{ $degree['students'] }}</section>
-
-                    <section> <a href="{{ route('degrees.show', $degree['id']) }}">Ver</a> <a
-                            href="{{ route('degrees.destroy', $degree['id']) }}">Eliminar</a></section>
-
-                </div>
-            </div>
-        @endforeach
-
-    </div> --}}
 
 
 
@@ -40,8 +14,9 @@
 
 
         @foreach ($data as $degree)
-            <a href="{{ route('degrees.show', $degree['id']) }}">
-                <div>
+            <div>
+                <a class="a-content" href="{{ route('degrees.show', $degree['id']) }}">
+
 
 
                     <img src=" {{ $degree['image'] }} " alt="" />
@@ -54,8 +29,21 @@
                     <p>Estudiantes: {{ $degree['students'] }}</p>
 
 
+
+
+                </a>
+                <div class="delete-edit">
+                    <a href="{{ route('degrees.destroy', $degree['id']) }}"><i class="fa-solid fa-trash"
+                            style="color: #ff0000; font-size:30px"></i></a>
+
+
+
+                    <a href="{{ route('degrees.edit', $degree['id']) }}"> <i class="fa-solid fa-pen-to-square"
+                            style="color: #f19721; font-size
+                            :30px"></i></a>
                 </div>
-            </a>
+
+            </div>
         @endforeach
 
 
@@ -93,7 +81,7 @@
                 @foreach ($imagesData['images'] as $image)
                     <label>
                         <input class="input-image" type="radio" name="image" value="{{ $image }}">
-                        <img src="{{ $image }}" alt="Imagen" style="width: 200px">
+                        <img src="{{ $image }}" alt="Imagen" style="width: 200px; height:200px">
                     </label>
                 @endforeach
 

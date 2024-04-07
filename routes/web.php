@@ -22,9 +22,13 @@ use Illuminate\Support\Facades\Http;
 */
 
 
-Route::get('/', function () {
-    dd("hola");
-});
+Route::get('/', [UsersController::class, 'home'])->name('users.home');
+Route::get('/mision', [UsersController::class, 'mision'])->name('users.mision');
+Route::get('/vision', [UsersController::class, 'vision'])->name('users.vision');
+Route::get('/contactenos', [UsersController::class, 'contactenos'])->name('users.contactenos');
+
+Route::get('/preguntas', [UsersController::class, 'preguntas'])->name('users.preguntas');
+
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::get('/users/create', [UsersController::class, 'create']);
@@ -38,7 +42,8 @@ Route::get('/degrees', [DegreeController::class, 'index'])->name('degrees.index'
 Route::get('/degrees/create', [DegreeController::class, 'create']);
 Route::post('/degrees', [DegreeController::class, 'store'])->name('degrees.store');
 Route::get('/degrees/{idDegree}', [DegreeController::class, 'show'])->name('degrees.show');
-Route::post('/degrees/update', [DegreeController::class, 'update'])->name('degrees.update');
+Route::get('/degrees/edit/{id}', [DegreeController::class, 'edit'])->name('degrees.edit');
+Route::put('/degrees/update/{id}', [DegreeController::class, 'update'])->name('degrees.update');
 Route::get('/degrees/delete/{id}', [DegreeController::class, 'destroy'])->name('degrees.destroy');
 
 

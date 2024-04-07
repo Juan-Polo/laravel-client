@@ -6,116 +6,94 @@
 @section('content')
 
 
-    {{-- <h1> Usuario {{ $user['name'] }} </h1>
 
-<form action="{{ route('users.update') }}" method="POST">
 
-    @csrf
+    <div class="subir">
 
-    <input type="hidden" name="id" value="{{ $user['id'] }}">
+        <div>
+            <form action=" http://127.0.0.1:8000/v1/upload " method="POST" enctype="multipart/form-data">
 
-    <label for="name">Nombre: <br> <input type="text" name="name"value="{{ $user['name'] }}">
-    </label>
-    <br>
-    <label for="lastname">Apellidos: <br> <input type="text" name="lastname" value="{{ $user['lastname'] }}">
-    </label>
-    <br>
-    <label for="email">Correo electronico: <br> <input type="text" name="email" value="{{ $user['email'] }}">
-    </label>
-    <br> --}}
-    {{-- <label for="password">Contraseña <br> <input type="password" name="password" value="{{ $user['password'] }}"> --}}
-    {{-- </label>
-    <br>
-    <label for="role_id">Role <br> <input type="text" name="role_id" value="{{ $user['role_id'] }}">
-    </label>
-    <br><br>
-    <button type="submit"> Actualizar </button>
+                @csrf
+                <label class="file-label"> subir<i class="fa-solid fa-cloud-arrow-up"
+                        style="color: #f19721;  font-size:40px;margin-top:10px"></i> <input id="horario_url" class="file"
+                        type="file" name="image_url" accept="image/*"></label>
+
+                <input type="hidden" name="user_id" value="{{ $user['id'] }}">
 
 
 
-</form> --}}
+                <button type="submit"> Subir imagen </button>
 
 
 
+            </form>
+
+
+        </div>
+
+        <div>
+            <form action="http://127.0.0.1:8000/v1/update-image/{{ $user['image'] ? $user['image']['id'] : 'null' }}"
+                method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="_method" value="PUT"> <!-- Método para simular PUT -->
+
+                <label class="file-label"> subir<i class="fa-solid fa-pen-to-square"
+                        style="color:#f19721; font-size:40px;margin-top:10px "></i> <input id="horario_url" class="file"
+                        type="file" name="image_url" accept="image/*"></label>
 
 
 
+                <input type="hidden" name="user_id" value="{{ $user['id'] }}">
 
+
+                </label>
+
+
+                <button type="submit">Actualizar Imagen</button>
+            </form>
+        </div>
+
+
+    </div>
 
     <div class="perfil">
-        <button id="button_desplegable_perfil" onclick="Mostrar_Ocultar();">
-            <ul id="left_opciones">
-                <a href="login.html">
-                    <li>
-                        <p>Registrarse</p>
-                    </li>
-                </a>
-                <a href="login.html">
-                    <li>
-                        <p>Iniciar sesion</p>
-                    </li>
-                </a>
-            </ul>
-        </button>
 
-        <div class="portada"></div>
+
+
+
         <div class="foto_perfil">
             <div class="foto">
-
-
                 @if (isset($user['image']['image_url']))
                     <img src="{{ $urlBase . $user['image']['image_url'] }}" alt="">
                 @else
                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="">
                 @endif
+            </div>
 
 
 
+            <div class="text-perfil">
+                <p>
+                    <span>Nombre:</span> {{ $user['name'] }} {{ $user['lastname'] }} <br /><br />
+                    <span>Rol: </span>{{ $user['role']['name'] }}
+                </p>
 
+                <p>
+
+                    <span>Correo:</span> {{ $user['email'] }}
+
+
+                </p>
             </div>
 
 
 
 
-
-
-
-
-            <p>
-                <span>Nombre:</span> {{ $user['name'] }} <br /><br />
-                <span>Rol: </span>Admin
-            </p>
-            <div class="tuerca" onclick="Mostrar_Ocultar_Tuerca();">
-                <img src="img/tuerca.png" alt="" />
-
-                <ul id="desplegable_tuerca">
-                    <a href="editar_perfil.html">
-                        <li>Editar Perfil</li>
-                    </a>
-
-                    <a href="opciones_perfil.html">
-                        <li>Mi cuenta</li>
-                    </a>
-
-                    <a href="index.html">
-                        <li>Cerra Sesion</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-
-        <div class="publicaciones">
-            <button>
-                <img src="img/usuario-informacion.png" alt="" /> informacion
-            </button>
-            <p><img src="img/comentario.png" alt="" />Comentarios</p>
-        </div>
-
-        <div class="subidas">
-            <p>No Hay Publicaciones</p>
-
-            <img src="img/cara-triste.png" alt="" />
         </div>
 
 
-    @endsection
+
+    </div>
+
+
+@endsection

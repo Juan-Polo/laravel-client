@@ -1,0 +1,108 @@
+/*  estilos formulario */
+.form {
+    background-color: #38bd9188;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 900px;
+    width: 1500px;
+
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    /* border: 12px dashed #ffffffc4; */
+    outline: 12px dashed #ffffffc4;
+}
+@media (max-width: 788px) {
+    .form {
+        padding: 50px;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+.table1 {
+    background-size: cover;
+    border: solid 3px white;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.table1 tr {
+    font-family: Comic Sans MS;
+    font-weight: 900;
+    font-size: 15px;
+    text-align: left;
+    padding: 60px;
+    display: grid;
+    row-gap: 10px;
+    overflow: hidden;
+}
+.table1 td {
+    padding: 60px;
+    display: grid;
+    row-gap: 10px;
+    background-color: #ffffff31;
+}
+
+.mensaje {
+    height: 100px;
+    text-align: left;
+}
+
+input {
+    border: none;
+    border-bottom: 3px dashed #f19721;
+}
+
+.enviar {
+    font-family: Comic Sans MS;
+    color: white;
+    background-color: #f19721;
+    border-radius: 40px;
+    border-color: white;
+    height: 50px;
+    width: 130px;
+    margin-left: 50px;
+}
+
+.formniños {
+    width: 350px;
+    height: 250px;
+    border: solid 2px white;
+    border-radius: 50px;
+    background-image: url(../img/formniños.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 0, 0, 0);
+    align-items: center;
+    justify-content: center;
+}
+
+.ubicacion .iframe {
+    background-color: rgba(0, 0, 0, 0.534);
+    border: solid 2px white;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tabla que muestra el registro*/
+.table2 {
+    border: solid 2px white;
+    border-radius: 20px;
+}

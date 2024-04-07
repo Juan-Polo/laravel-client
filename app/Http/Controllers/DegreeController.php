@@ -15,7 +15,7 @@ class DegreeController extends Controller
         $response = Http::get($url . '/degrees');
         $data = $response->json();
 
-
+        $editing = null;
 
         $imagesResponse  = Http::get($url . '/getImages');
         $imagesData = $imagesResponse->json();
@@ -23,7 +23,7 @@ class DegreeController extends Controller
 
 
 
-        return view('degrees.index', compact('data', 'imagesData'));
+        return view('degrees.index', compact('data', 'imagesData', 'editing'));
     }
 
 
@@ -58,6 +58,23 @@ class DegreeController extends Controller
 
 
 
+    public function edit(Request $request, $id)
+    {
+
+        $url = env('URL_SERVER_API', 'http://127.0.0.1');
+        $response = Http::get($url . '/degrees/' . $id);
+        $data = $response->json();
+
+
+        $response = Http::get($url . '/getImages');
+        $images = $response->json();
+
+        // dd($data, $images);
+        return view('degrees.edit', compact('data', 'images'));
+    }
+
+
+
     public function destroy($idDegree)
     {
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
@@ -68,10 +85,15 @@ class DegreeController extends Controller
 
     public function show($idDegree)
     {
+
+        $urlBase = 'http://127.0.0.1:8000/';
+
         $url = env('URL_SERVER_API', 'http://127.0.0.1');
         $response = Http::get($url . '/degrees/' . $idDegree);
         $data = $response->json();
-        return view('degrees.show', compact('data'));
+
+        // dd($data);
+        return view('degrees.show', compact('data', 'urlBase'));
     }
 
     public function update(Request $request)
@@ -81,6 +103,8 @@ class DegreeController extends Controller
             'name' => $request->name,
             'school_day' => $request->school_day,
             'students' => $request->students,
+            'image' => $request->image,
+
 
         ]);
 

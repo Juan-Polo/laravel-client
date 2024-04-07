@@ -1,14 +1,57 @@
 .perfil {
-    background-color: rgba(141, 102, 102, 0);
+    background-color: rgba(141, 102, 102, 0.015);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.subir {
+    background-color: rgba(255, 5, 5, 0);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 400px;
+    width: 600px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.subir div {
+    background-color: rgba(0, 0, 255, 0);
+    margin-bottom: 150px;
+}
+
+.subir div form {
+    background-color: rgba(0, 0, 255, 0);
+    width: 100px;
+    height: 100px;
+}
+
+.subir div form button {
+    padding: 10px 0px;
+    border: solid 2px white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #f19721;
+    color: white;
+    transition: all 900ms;
+    border-radius: 10px;
+    height: 40px;
+    width: 150px;
+}
+
+.subir div form button:hover {
+    color: #3ba1da;
+    background-color: rgba(255, 255, 255, 0.486);
+    border: solid;
+    color: #f19721d0;
+}
+
 #button_desplegable_perfil {
     background-color: #f19721;
-    background-image: url(/img/flecha.png);
+    background-image: url();
     background-repeat: no-repeat;
     background-size: 40px;
     background-position: center;
@@ -23,8 +66,6 @@
     align-items: center;
 }
 
-#button_desplegable_perfil:hover {
-}
 #button_desplegable_perfil ul {
     height: 120px;
     width: 500px;
@@ -52,26 +93,18 @@
     margin-top: 10px;
 }
 
-#button_desplegable_perfil li p {
+#button_desplegable_perfil li .text-perfil {
     margin-top: 10px;
-}
-
-.portada {
-    height: 370px;
-    width: 1000px;
-    border: solid 2px white;
-    background-color: rgba(255, 255, 255, 0);
-    background-image: url(/img/fondo-portada.png);
-    background-size: contain;
 }
 
 .foto_perfil {
     background-color: rgba(0, 0, 0, 0.418);
 
     border-bottom: solid 3px white;
-    height: 110px;
+    height: 230px;
     width: 1000px;
     display: flex;
+    justify-content: center;
 }
 
 .foto {
@@ -80,44 +113,39 @@
     background-size: cover;
     height: 200px;
     width: 200px;
-    position: relative;
+    position: absolute;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: -100px;
-    margin-left: 50px;
+
     border-radius: 100px;
     border: solid 5px white;
 }
-
 .foto img {
     border-radius: 100px;
-    height: 190px;
-    width: 190px;
 }
-
-.foto_perfil p {
+.foto_perfil .text-perfil {
     color: wheat;
-    position: relative;
-    margin-top: 10px;
+    position: absolute;
+    margin-top: 110px;
     font-size: 20px;
-    margin-left: 50px;
+    gap: 150px;
+    display: flex;
+
+    background-color: rgba(255, 0, 0, 0);
 }
 
-.foto_perfil p span {
+.foto_perfil .text-perfil span {
     color: #f19721;
     font-weight: bold;
 }
 
 .tuerca {
     background-color: rgba(247, 10, 10, 0);
-
     width: 5%;
     height: 50px;
-    margin-left: 310px;
-    margin-top: 10px;
-    position: relative;
+    margin-left: 710px;
+    margin-top: 145px;
+    position: absolute;
     z-index: 2;
 }
 .foto_perfil .tuerca img {
@@ -187,55 +215,5 @@
     justify-content: center;
     background-color: #3ba1da;
     border: 0;
-    margin-left: 50px;
-}
-
-.publicaciones button:hover {
-    color: #3ba1da;
-    background-color: rgba(255, 255, 255, 0.411);
-    border: solid;
-}
-.publicaciones img {
-    width: 20px;
-    height: 20px;
-}
-
-.publicaciones p {
-    background-color: #3ba0da00;
-    width: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    margin-right: 600px;
-    color: white;
-}
-
-.publicaciones p img {
-    width: 30px;
-    height: 35px;
-}
-
-.subidas {
-    background-color: rgba(0, 0, 0, 0.521);
-    border-radius: 30px;
-    gap: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
-    width: 500px;
-    margin-top: 40px;
-}
-
-.subidas p {
-    font-size: 30px;
-    color: white;
-}
-
-.subidas img {
-    width: 200px;
-    height: 200px;
+    margin-left: 350px;
 }

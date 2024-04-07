@@ -7,8 +7,7 @@
     box-sizing: border-box;
 }
 
-a:link {
-    color: inherit;
+a {
     text-decoration: none;
 }
 
@@ -24,22 +23,13 @@ body {
     background-size: cover;
     font-family: Comic Sans MS;
 }
-
-.contenido {
-    background-color: rgba(140, 135, 135, 0);
-    height: auto;
-    align-items: center;
-    margin-top: 20px;
+.container {
+    width: 98%;
+    margin-bottom: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.container {
-    width: 98%;
-
-    background-color: rgba(236, 141, 18, 0);
-    margin: 0px auto;
 }
 .superior {
     background-color: #351658;
@@ -67,23 +57,19 @@ body {
     background-color: #be101000;
     padding: 25px;
     margin-left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo img {
-    height: 165px;
-    padding: 0px;
 }
 .menu {
     background-color: rgba(255, 255, 255, 0);
     width: 80%;
     padding: 60px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 60px;
 }
-
+.btn-res {
+    display: none;
+}
 .user {
     height: 130px;
     width: 140px;
@@ -99,7 +85,7 @@ body {
 
 /* atributos del los botoes del menu */
 
-.menu button {
+.menu .btn-menu {
     color: rgb(0, 0, 0);
     border: 0;
     background-color: #f19721;
@@ -114,7 +100,7 @@ body {
     color: white;
 }
 
-.menu button:hover {
+.menu .btn-menu:hover {
     background-color: #f19721;
     border-bottom: dashed 3px white;
     border-top: dashed 3px white;
@@ -131,7 +117,6 @@ body {
     height: 50px;
     margin-left: 1530px;
     margin-top: 19px;
-    margin-bottom: 40px;
 }
 .busqueda {
     position: absolute;
@@ -173,6 +158,67 @@ body {
     border-radius: 50%;
     cursor: pointer;
 }
+#div-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 90px;
+    width: auto;
+}
+@media (max-width: 990px) {
+    .btn-res {
+        color: rgb(0, 0, 0);
+        border: 0;
+        background-color: #f19721;
+        border-bottom: solid 2px white;
+        border-top: solid 2px white;
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+
+        font-family: Comic Sans MS;
+        font-size: 20px;
+        color: white;
+        display: block;
+    }
+    .menu .btn-res:hover {
+        background-color: #f19721;
+        border-bottom: dashed 3px white;
+        border-top: dashed 3px white;
+        color: white;
+        transition: all 1200ms;
+        transform: skew(-15deg) scalex(1);
+    }
+    .menu {
+        background-color: rgba(127, 255, 212, 0);
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin-right: 30px;
+    }
+    .user {
+        display: grid;
+    }
+    .logo img {
+        width: 140px;
+        height: 140px;
+    }
+    .busqueda {
+        right: 2rem;
+    }
+    #div-menu {
+        margin-top: 300px;
+        position: absolute;
+        display: none;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 851px) {
+    .container {
+        margin-top: -50px;
+    }
+}
 
 /* El desplegable del boton de misión y visión */
 
@@ -197,6 +243,12 @@ body {
     height: 200px;
     width: 400px;
 }
+@media (max-width: 788px) {
+    .gatoimg {
+        width: 330px;
+        height: 180px;
+    }
+}
 
 ul {
     list-style: none;
@@ -207,7 +259,7 @@ ul {
     margin-top: -200px;
     transform: rotate(-90deg);
 }
-.desplegable li a {
+.desplegable .catt a {
     background-color: #f19721;
     color: white;
     font-family: Comic Sans MS;
@@ -226,17 +278,17 @@ ul {
     display: block;
 }
 
-.desplegable li a:hover {
+.desplegable .gato-l a:hover {
     background-color: rgb(255, 255, 255);
     color: #f19721;
 }
 
-.cat ul {
+.cat .gato-u {
     display: none;
     position: absolute;
 }
 
-.cat:hover > ul {
+.cat:hover > .gato-u {
     display: block;
 }
 
@@ -274,10 +326,11 @@ ul {
     align-items: center;
     justify-content: center;
     font-family: Comic Sans MS;
-    margin-top: 100px;
+
     gap: 10px;
-    height: 340px;
+    height: auto;
 }
+
 .niña {
     width: 230px;
     height: 250px;
@@ -314,7 +367,7 @@ ul {
 }
 
 /* .content_footer ul, */
-.content_footer li {
+.content_footer .fuu-l {
     /* height: 60px;
     width: 300px; */
     padding: 10px;
@@ -325,10 +378,22 @@ ul {
     gap: 20px;
 }
 
-.content_footer ul img {
+.content_footer .fuu-u img {
     width: 50px;
 }
 
 button {
     cursor: pointer;
+}
+@media (max-width: 768px) {
+    .content_footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .pie {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }

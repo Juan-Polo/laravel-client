@@ -1,0 +1,115 @@
+.ejemM {
+  background-color: rgba(165, 42, 42, 0);
+  width: 1500px;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+/*Estilos de la pagina de misión*/
+.mision {
+  padding-top: 90px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: absolute;
+  background-color: aliceblue;
+  border: solid 4px yellow;
+  border-radius: 30px;
+  gap: 20px;
+
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 28px;
+  margin: auto;
+  z-index: 1;
+}
+.mision h2 {
+  background-color: rgba(250, 235, 215, 0);
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.imgderechaM {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  z-index: 2;
+  display: block;
+  border: solid;
+  border-radius: 30px;
+  margin-left: 650px;
+  margin-bottom: 650px;
+}
+
+.imgizquierdaM {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  z-index: 2;
+  display: block;
+  border: solid;
+  border-radius: 30px;
+  margin-right: 650px;
+  margin-top: 600px;
+}
+
+/*Estilos de la pagina de visión*/
+.ejemV {
+  background-color: rgba(122, 33, 33, 0);
+  width: 1500px;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.vision {
+  padding-top: 62px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: absolute;
+  background-color: aliceblue;
+  border: solid 4px yellow;
+  border-radius: 30px;
+  width: 650px;
+  height: 650px;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 28px;
+  margin: auto;
+  z-index: 1;
+}
+.vision h2 {
+  background-color: antiquewhite;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.imgderechaV {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  z-index: 2;
+  display: block;
+  border: solid;
+  border-radius: 30px;
+  margin-left: 650px;
+  margin-bottom: 700px;
+}
+
+.imgizquierdaV {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  z-index: 2;
+  display: block;
+  border: solid;
+  border-radius: 30px;
+  margin-right: 650px;
+  margin-top: 700px;
+}

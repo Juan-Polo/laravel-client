@@ -22,7 +22,7 @@ class UsersController extends Controller
 
 
         // dd($data);
-        return view('users.index', compact('data', 'urlBase'));
+        return view('users.index',  compact('data', 'urlBase'));
     }
 
     public function create()
@@ -46,7 +46,7 @@ class UsersController extends Controller
             'password' => $request->password,
             'role_id' => $request->role_id,
         ]);
-        return redirect()->route('users.index');
+        return redirect()->route('users.home');
     }
 
 
@@ -69,8 +69,7 @@ class UsersController extends Controller
         $user = $response->json();
 
 
-
-
+        // dd($user);
         return view('users.show', compact('user', 'urlBase'));
     }
 
@@ -88,5 +87,33 @@ class UsersController extends Controller
 
 
         return redirect()->route('users.index');
+    }
+
+
+    public function home()
+    {
+
+        return view('index');
+    }
+
+
+    public function preguntas()
+    {
+        return view('preguntas');
+    }
+
+
+    public function mision()
+    {
+        return view('mision');
+    }
+
+    public function vision()
+    {
+        return view('vision');
+    }
+    public function contactenos()
+    {
+        return view('contactenos');
     }
 }
