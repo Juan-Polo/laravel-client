@@ -196,6 +196,8 @@ FORMULARIO DE ASIGNATURAS
 #DivFormAsignaturas form {
     background-color: rgba(255, 12, 12, 0);
     display: flex;
+    width: auto;
+    margin-top: 50px;
     flex-direction: column;
     align-items: center;
 }
@@ -253,7 +255,7 @@ FORMULARIO DE ASIGNATURAS
     border-radius: 10px;
     height: 60px;
     width: 60px;
-    bottom: 290px;
+    bottom: 530px;
     left: 350px;
     position: relative;
 }

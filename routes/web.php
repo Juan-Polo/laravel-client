@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Http;
 */
 
 
-Route::get('/', [UsersController::class, 'home'])->name('users.home');
+Route::get('/home', [UsersController::class, 'home'])->name('users.home');
 Route::get('/mision', [UsersController::class, 'mision'])->name('users.mision');
 Route::get('/vision', [UsersController::class, 'vision'])->name('users.vision');
 Route::get('/contactenos', [UsersController::class, 'contactenos'])->name('users.contactenos');
@@ -31,7 +31,7 @@ Route::get('/preguntas', [UsersController::class, 'preguntas'])->name('users.pre
 
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
-Route::get('/users/create', [UsersController::class, 'create']);
+Route::get('/', [UsersController::class, 'create']);
 Route::post('/users', [UsersController::class, 'store'])->name('users.store');
 Route::get('/users/{idUser}', [UsersController::class, 'show'])->name('users.show');
 Route::post('/users/update', [UsersController::class, 'update'])->name('users.update');

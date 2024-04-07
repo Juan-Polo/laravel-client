@@ -3,6 +3,12 @@
 
 
 @section('content')
+    <style>
+        .cat {
+
+            display: none
+        }
+    </style>
     <script>
         // Mostrar interfaz de tareas
 
@@ -68,7 +74,7 @@
 
 
                 <button id="button_asignaturas" onclick="Mostrar_Ocultar_Asignaturas()">
-                    <img src="icons/tareas.png" alt="" />
+                    <img src="{{ asset('icons/tareas.png') }}" alt="" />
                 </button>
                 {{-- 
                 <button id="button_pdf" onclick="Mostrar_Ocultar_pdf();">
@@ -76,7 +82,7 @@
                 </button> --}}
 
                 <button id="button_horario" onclick="Mostrar_Ocultar_Horario()">
-                    <img src="icons/horario-de-trabajo.png" alt="" />
+                    <img src="{{ asset('icons/horario-de-trabajo.png') }}" alt="" />
                 </button>
             </div>
         </div>
