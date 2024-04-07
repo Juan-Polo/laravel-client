@@ -71,7 +71,7 @@
 
             <input type="number" name="students" placeholder="Numero de alumnos ">
 
-            <h1>Ecoje Una Imagen</h1>
+            <h1>Escoge Una Imagen</h1>
 
 
 
